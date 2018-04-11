@@ -6,7 +6,11 @@
     
     $( function () {
       
+       // localStorage.setItem('favouriteflavour','vanilla');
 
+       var getFlavour = localStorage.getItem('favouriteflavour');
+
+        $('#messagePanel').empty().append(getFlavour);
 
     } ); // end jquery load 
     
