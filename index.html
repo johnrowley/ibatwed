@@ -6,11 +6,20 @@
     
     $( function () {
       
-       // localStorage.setItem('favouriteflavour','vanilla');
+     
 
        var getFlavour = localStorage.getItem('favouriteflavour');
 
         $('#messagePanel').empty().append(getFlavour);
+
+        $('#btnfavouriteflavour').on('click', function () {
+            console.log("saving fav flavour");
+            var favFlavour = $('#tbfavouriteflavour').val()
+            localStorage.setItem('favouriteflavour',favFlavour);
+
+        } )
+
+
 
     } ); // end jquery load 
     
@@ -24,6 +33,8 @@
 </head>
 <body>
 <div id="messagePanel">This is a message and again</div>
+<input type="text" id="tbfavouriteflavour" />
+<button id="btnfavouriteflavour">Set Flavour</button>
 
 
 </body>
